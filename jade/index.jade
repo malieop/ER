@@ -1,0 +1,47 @@
+//output: index.html
+
+
+doctype html
+html(lang="pt")
+  head
+    title EVHub
+    meta(charset="utf-8")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+  body
+
+
+    //navbar
+    .navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          a(href="#", class="navbar-brand") EVHub
+        ul.nav.navbar-nav
+          li.active
+            a Home
+          li
+            a(href="#") Page 1
+          li
+            a(href="#") Page 2
+          
+    // Formulario do Login
+    .container-fluid
+      .row
+        .col-md-4.col-sm-4.col-xs-12
+        .col-md-4.col-sm-4.col-xs-12
+          form
+            //Email
+            .form-group
+              label(for="Email") Email
+              input(type="email" class="form-control")
+              
+            // Pass
+            .form-group
+              label(for="Password") Password
+              input(type="password" class="form-control")
+              
+          // Botão submit (vai para a página dashboard)
+          button(class="btn btn-success", onclick="window.location.href='dashboard.html'") Submeter
+            
+        .col-md-4.col-sm-4.col-xs-12
+  
