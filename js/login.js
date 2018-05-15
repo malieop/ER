@@ -10,13 +10,29 @@ function login() {
     window.location.href = 'morador.html?utilizador=morador1';
   } else if (email == 'tecnico@gmail.com' && pass == "123") {
     window.location.href = 'dashboard.html';
-  } else
-    alert("E-mail ou password incorretos!");
+  } else{
+    var p = document.getElementById("errorLogin")
+    p.classList.remove("hide")
+  }
 }
 
-function magia() {
-  var t = document.getElementById("div")
+function magia()
+{
+  var t = document.getElementById ("div")
   t.classList.remove("hide")
-    var r = document.getElementById("formulario")
-    r.className += "hide";
+  var r = document.getElementById("formulario")
+    r.className += "hide"
+    var f = document.getElementById("footer")
+        f.classList.remove("hide")
+
+}
+
+function retorcede()
+{
+  var f = document.getElementById("footer")
+  f.className += " hide"
+  var t = document.getElementById ("formulario")
+  t.classList.remove("hide")
+  var r = document.getElementById("div")
+  r.className += "hide"
 }

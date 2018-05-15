@@ -12,10 +12,10 @@
   <script src="../js/login.js"></script>
 </head>
 
-<body >
+<body>
   <!--navbar-->
   <div class="page-header">
-          <h1>EVHub</h1>
+    <h1>EVHub</h1>
   </div>
 
   <!-- Formulario do Login-->
@@ -26,48 +26,56 @@
 
         <div id=formulario>
 
-        <form>
-          <!--Email-->
-          <div class="form-group">
-            <label for="Email">E-mail</label>
-            <input id="input_email" type="email" class="form-control">
-          </div>
-          <!-- Pass-->
-          <div class="form-group">
-            <label for="Password">Password</label>
-            <input id="input_pass" type="password" class="form-control">
-          </div>
-        </form>
-        <!-- Botão submit (vai para a página dashboard)-->
-        <button onclick="login()" class="btn btn-success">Submeter</button>
-        <button onclick="magia()" class="btn btn-success">Solicitar Carregamento</button>
+          <form>
+            <!--Email-->
+            <div class="form-group">
+              <label for="Email">E-mail</label>
+              <input id="input_email" type="email" class="form-control">
+            </div>
+            <!-- Pass-->
+            <div class="form-group">
+              <label for="Password">Password</label>
+              <input id="input_pass" type="password" class="form-control">
+            </div>
+          </form>
 
-      </div>
+          <p id="errorLogin" class="hide">E-mail ou Password incorretos!</p>
+          <!-- Botão submit-->
+          <button onclick="login()" class="btn btn-success">Submeter</button><br><br>
+          <button onclick="magia()" class="btn btn-success">Solicitar Carregamento</button>
+
+        </div>
 
         <br><br>
-        <div id="div" class="hide" >
+        <div id="div" class="hide">
 
           <form>
             <!--Nome-->
             <div class="form-group">
-              <label >Nome:</label>
-              <input id="input_nome"  class="form-control">
+              <label>Nome:</label>
+              <input id="input_nome" class="form-control">
             </div>
             <!--Apartamento-->
             <div class="form-group">
-              <label >Apartamento:</label>
-              <input id="input_nome"  class="form-control">
+              <label>Apartamento:</label>
+              <input id="input_nome" class="form-control">
             </div>
             <!-- Matricula-->
-              <label >Matricula: 63-QJ-69</label>
-<br><br>
-<button onclick="alert('Carregamento solicitado com sucesso')" class="btn btn-success">Solicitar </button>
-</form>
+            <label>Matricula: 63-QJ-69</label>
+            <br><br>
+            <button onclick="alert('Carregamento solicitado com sucesso')" class="btn btn-success">Solicitar </button>
+          </form>
 
-         </div>
+        </div>
       </div>
     </div>
   </div>
+
+  <footer class="footer hide" id="footer">
+    <div class="container-fluid">
+      <a href="javascript:retorcede();"><img src="../images/back-arrow.png" width = "25px"></a>
+    </div>
+  </footer>
 
 </body>
 

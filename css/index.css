@@ -17,9 +17,12 @@
   text-align: center;
 }
 
-/* a{
-  color:ForestGreen !important;
+#errorLogin{
+  color: red;
+  text-align: center;
+  font-weight: bold;
 }
-a:hover {
-    color: LimeGreen !important;
-} */
+
+button{
+  width: 100%;
+}
