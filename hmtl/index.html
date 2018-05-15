@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <title>EVHub</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="../js/login.js"></script>
+</head>
+
+<body >
+  <!--navbar-->
+  <div class="page-header">
+          <h1>EVHub</h1>
+  </div>
+
+  <!-- Formulario do Login-->
+  <div class="container-fluid formCenter">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-xs-12"></div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+
+        <div id=formulario>
+
+        <form>
+          <!--Email-->
+          <div class="form-group">
+            <label for="Email">E-mail</label>
+            <input id="input_email" type="email" class="form-control">
+          </div>
+          <!-- Pass-->
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input id="input_pass" type="password" class="form-control">
+          </div>
+        </form>
+        <!-- Botão submit (vai para a página dashboard)-->
+        <button onclick="login()" class="btn btn-success">Submeter</button>
+        <button onclick="magia()" class="btn btn-success">Solicitar Carregamento</button>
+
+      </div>
+
+        <br><br>
+        <div id="div" class="hide" >
+
+          <form>
+            <!--Nome-->
+            <div class="form-group">
+              <label >Nome:</label>
+              <input id="input_nome"  class="form-control">
+            </div>
+            <!--Apartamento-->
+            <div class="form-group">
+              <label >Apartamento:</label>
+              <input id="input_nome"  class="form-control">
+            </div>
+            <!-- Matricula-->
+              <label >Matricula: 63-QJ-69</label>
+<br><br>
+<button onclick="alert('Carregamento solicitado com sucesso')" class="btn btn-success">Solicitar </button>
+</form>
+
+         </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
