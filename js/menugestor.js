@@ -34,7 +34,7 @@ console.log(pessoas);
 var i,x="",j = "";
 
   var element = document.getElementById("teste");
-for (i in pessoas){
+/*for (i in pessoas){
   var txt = document.createElement("p");
   var node = document.createTextNode(pessoas[i].nome);
   txt.appendChild(node);
@@ -43,4 +43,4 @@ for (i in pessoas){
 
 
 console.log(element);
-}
+}*/

@@ -3,7 +3,7 @@ function login() {
   pass = document.getElementById('input_pass').value;
 
   if (email == 'gestor@gmail.com' && pass == "123") {
-    window.location.href = 'dashboard.html';
+    window.location.href = 'menugestor.html';
   } else if (email == 'morador@gmail.com' && pass == "123") {
     window.location.href = 'morador.html?utilizador=morador';
   } else if (email == 'morador1@gmail.com' && pass == "123") {
