@@ -52,21 +52,26 @@
             <!--Nome-->
             <div class="form-group">
               <label>Nome:</label>
-              <input id="input_nome" class="form-control">
+              <input type='text' id="input_nome" onkeyup="reescreve('input_nome','inclino')" class="form-control">
             </div>
             <!--Apartamento-->
             <div class="form-group">
               <label>Apartamento:</label>
-              <input id="input_apartamento" class="form-control">
+              <input type='text' id="input_apartamento" onkeyup="reescreve('input_apartamento','n_apartamento')" class="form-control">
             </div>
             <!-- Matricula-->
-            <label>Matricula: 63-QJ-69</label>
-            <br><br>
+            <br>
+            <label>Nome do inclíno: <span id="inclino"></span></label> <br>
+            <label>Apartamento número: <span id="n_apartamento"></span></label> <br>
+            <label>Matricula:</label> 63-QJ-69 <br>
+            <br>
             <p id="errorLogin2" class="errorLogin hide">Nome e/ou apartamento não existentes!</p>
             <p id="errorLogin3" class="errorLogin hide">Pedido de carregamento efectuado com sucesso!</p>
             <button id="solicitarbotao" onclick="solicitar()" class="btn btn-success" type="button">Solicitar</button>
             <button id="voltarbotao" onclick=location=URL class="btn btn-success hide" type="button">Voltar ao inicio</button>
           </form>
+
+          <p id="errorSolicitar" class="hide">Nome ou apartamento incorretos!</p>
 
         </div>
       </div>
