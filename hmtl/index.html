@@ -8,8 +8,7 @@
   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
   <link href="../css/index.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="../js/login.js"></script>
+
 </head>
 
 <body>
@@ -39,9 +38,9 @@
             </div>
           </form>
 
-          <p id="errorLogin" class="hide">E-mail ou Password incorretos!</p>
+          <p id="errorLogin" class="errorLogin hide">E-mail ou Password incorretos!</p>
           <!-- Botão submit-->
-          <button onclick="login()" class="btn btn-success">Submeter</button><br><br>
+          <button id= "submeterbotao" onclick="login()" class="btn btn-success">Submeter</button><br><br>
           <button onclick="magia()" class="btn btn-success">Solicitar Carregamento</button>
 
         </div>
@@ -58,12 +57,15 @@
             <!--Apartamento-->
             <div class="form-group">
               <label>Apartamento:</label>
-              <input id="input_nome" class="form-control">
+              <input id="input_apartamento" class="form-control">
             </div>
             <!-- Matricula-->
             <label>Matricula: 63-QJ-69</label>
             <br><br>
-            <button onclick="alert('Carregamento solicitado com sucesso')" class="btn btn-success">Solicitar </button>
+            <p id="errorLogin2" class="errorLogin hide">Nome e/ou apartamento não existentes!</p>
+            <p id="errorLogin3" class="errorLogin hide">Pedido de carregamento efectuado com sucesso!</p>
+            <button id="solicitarbotao" onclick="solicitar()" class="btn btn-success" type="button">Solicitar</button>
+            <button id="voltarbotao" onclick=location=URL class="btn btn-success hide" type="button">Voltar ao inicio</button>
           </form>
 
         </div>
@@ -78,5 +80,6 @@
   </footer>
 
 </body>
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../js/login.js"></script>
 </html>

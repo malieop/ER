@@ -36,3 +36,29 @@ function retorcede()
   var r = document.getElementById("div")
   r.className += "hide"
 }
+
+function solicitar(){
+  var nome = document.getElementById('input_nome').value;
+  var apartamento = document.getElementById('input_apartamento').value;
+var p2 = document.getElementById("errorLogin2")
+  if (nome === "" || apartamento === "") {
+
+      p2.classList.remove("hide")
+  } else{
+    p2.className += " hide";
+    var p3 = document.getElementById("errorLogin3")
+    p3.classList.remove("hide")
+    var b1 = document.getElementById("solicitarbotao")
+    b1.className += " hide";
+    var b2 = document.getElementById("voltarbotao")
+    b2.classList.remove("hide");
+  }
+}
+
+var input = document.getElementById("input_pass");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submeterbotao").click();
+    }
+});

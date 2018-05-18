@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="../css/index.css" rel="stylesheet">
+  <link href="../css/morador.css" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="../js/morador.js"></script>
 </head>
@@ -17,26 +18,34 @@
     <h3 style="color:grey; margin-top: 0;">Morador</h3>
   </div>
 
-<div class="container-fluid formCenter">
-  <div class="col-md-4 col-sm-4 col-xs-12"></div>
-  <div class="col-md-4 col-sm-4 col-xs-12">
+  <div class="container-fluid formCenter">
 
-    <!-- Formulario do Login-->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="text-center">
-          <button onclick="IniciarCarregamento()" class="btn btn-success" id="iniciar" style="width: 90%">
+    <div class = "hide" id = "animationBattery" style="text-align:center;">
+      <div class="battery">
+        <div class="liquid"></div>
+      </div>
+      <h5><b>Carregamento em processo!</b></h5>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    <div class="col-md-4 col-sm-4 col-xs-12">
+
+      <!-- Formulario do Login-->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="text-center">
+            <button onclick="IniciarCarregamento()" class="btn btn-success" id="iniciar" style="width: 90%">
             <img src="../images/plug.png" width= "30px"> Iniciar Carregamento
           </button><br><br>
-          <button onclick="window.location.href='agendar.html'" class="btn btn-success" style="width: 90%">
+            <button onclick="window.location.href='agendar.html'" class="btn btn-success" style="width: 90%">
             <img src="../images/calendar-with-a-clock-time-tools.png" width= "25px"> Agendar
         </button><br><br>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12"></div>
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12"></div>
       </div>
     </div>
   </div>
-</div>
 
   <footer class="footer">
     <div class="container-fluid">

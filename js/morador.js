@@ -9,12 +9,14 @@ function IniciarCarregamento()
     if(utilizador=="morador1")
       {
         var t = document.getElementById ("iniciar")
+        var b = document.getElementById ("animationBattery");
         if(j==1)
         {
           j=0;
           t.classList.remove("btn-success")
           t.className+= " btn-danger"
           t.innerHTML =" <img src='../images/unplugged.png' width= '30px'> Parar Carregamento"
+          b.classList.remove("hide");
         }
         else
         {
@@ -22,6 +24,7 @@ function IniciarCarregamento()
           t.classList.remove("btn-danger")
           t.className+= " btn-success"
           t.innerHTML  =" <img src='../images/plug.png' width= '30px'> Iniciar Carregamento"
+          b.className+= " hide"
         }
 
       }
