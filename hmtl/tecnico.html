@@ -15,8 +15,15 @@
 
       function myDeleteFunction(r) {
         var i = r.parentNode.parentNode.rowIndex;
-        document.getElementById("myTable").deleteRow(i);
+        document.getElementById("table").deleteRow(i);
+        alert("A reserva foi eleminada com sucesso!");
       }
+
+      function myAddFunction() {
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("table").parentNode.parentNode.outterHTML = "aa";
+      }
+
     </script>
   </head>
   <body>
@@ -80,14 +87,21 @@
       </tbody>
     </table>
 
-<table id="table"><thead>
-  <tr>
-    <th>Utilizador</th>
-    <th>Dia</th>
-    <th>Mês</th>
-    <th>Hora de Início</th>
-    <th>Hora de Fim </th>
-  </tr>
-</thead></table>
+
+<table class="table table-striped table-bordered table-hover table-condensed" id="table" >
+  <thead>
+    <tr>
+      <th>Utilizador</th>
+      <th>Dia</th>
+      <th>Mês</th>
+      <th>Hora de Início</th>
+      <th>Hora de Fim </th>
+      <th>Opção </th>
+    </tr>
+  </thead>
+  <script>
+    tabela(reservas);
+  </script>
+</table>
   </body>
 </html>
