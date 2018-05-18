@@ -4,7 +4,7 @@ var reservas= [
     "col3": "20",//Dia
     "col4":"14",// hora de inicio
     "col5":"14:30",
-    "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='myAddFunction(this)'>Modificar</button>"
+    "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera(this,reservas)'>Modificar</button>"
     },// hora de fim
 
     {"col1":"Apartamento 203",
@@ -12,7 +12,7 @@ var reservas= [
       "col3": "21",
       "col4":"10",
       "col5":"14",
-      "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='myAddFunction(this)'>Modificar</button>"},
+      "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera(this,reservas)'>Modificar</button>"},
 
     {  "col1":"Apartamento 205",
         "col2": "Maio",
@@ -20,8 +20,9 @@ var reservas= [
         "col4":"14",
         "col5":"16",
         "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera(this,reservas)'>Modificar</button>"
-      }
-]
+      }]
+
+var linha = "";
 function tabela(reservas) {
             $('#table').DataTable({
                 data: reservas,
@@ -40,12 +41,26 @@ function tabela(reservas) {
     $('#table').empty();
   }
 function altera(a,reservas){
-
+  var div = document.getElementById("modificar");
+  div.classList.remove("hide");
   var i = a.parentNode.parentNode.rowIndex;
-  //$('#table').empty();
-  //alert(reservas[i-1].col4);
-  reservas[i-1]["col4"] = "15";
+  document.getElementById('apartamento').innerHTML= reservas[i-1]["col1"];
+  $('#dia').val(reservas[i-1]["col2"]);
+  $('#mes').val(reservas[i-1]["col3"]);
+  $('#hora_inicio').val(reservas[i-1]["col4"]);
+  $('#hora_fim').val(reservas[i-1]["col5"]);
+  linha = i;
+  }
+
+function modifica(i){
+  var div = document.getElementById("modificar");
+  reservas[i-1]["col2"]= $('#dia').val();
+  reservas[i-1]["col3"]= $('#mes').val();
+  reservas[i-1]["col4"]= $('#hora_inicio').val();
+  reservas[i-1]["col5"]= $('#hora_fim').val();
+  div.className += "hide";
   $('#table').DataTable().destroy();
+  alert("Alteração concluída com sucesso.");
   //var x = reservas[i-1];
   //document.getElementById("table").deleteRow(i);
   //console.log(x);

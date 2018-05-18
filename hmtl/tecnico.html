@@ -19,7 +19,7 @@
         alert("A reserva foi eleminada com sucesso!");
       }
 
-      function myAddFunction() {
+      function myAddFunction(r) {
         var i = r.parentNode.parentNode.rowIndex;
         document.getElementById("table").parentNode.parentNode.outterHTML = "aa";
       }
@@ -103,5 +103,19 @@
     tabela(reservas);
   </script>
 </table>
+
+<div class="hide" id= "modificar">
+  <h2 id = "apartamento"></h2>
+  <h3>Dia</h3>
+  <input type=text id=dia></input>
+  <h3>Mês</h3>
+  <input type=text id=mes></input>
+  <h3>Hora de início</h3>
+  <input type=text id=hora_inicio></input>
+  <h3>Hora do fim</h3>
+  <input type=text id=hora_fim></input>
+  <button onclick="modifica(linha)" id=btn>Modificar</input>
+</div>
+
   </body>
 </html>
