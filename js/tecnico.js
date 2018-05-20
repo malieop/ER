@@ -4,7 +4,7 @@ var reservas= [
     "col3": "20",//Dia
     "col4":"14",// hora de inicio
     "col5":"14:30",
-    "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera(this,reservas)'>Modificar</button>"
+    "col6":"<button class='btn btn-success botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button class='btn btn-success botao_margem' onclick='altera(this,reservas)'>Modificar</button>"
     },// hora de fim
 
     {"col1":"Apartamento 203",
@@ -12,14 +12,14 @@ var reservas= [
       "col3": "21",
       "col4":"10",
       "col5":"14",
-      "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera(this,reservas)'>Modificar</button>"},
+      "col6":"<button class='btn btn-success botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button class='btn btn-success botao_margem' onclick='altera(this,reservas)'>Modificar</button>"},
 
     {  "col1":"Apartamento 205",
         "col2": "Maio",
         "col3": "30",
         "col4":"14",
         "col5":"16",
-        "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera(this,reservas)'>Modificar</button>"
+        "col6":"<button class='btn btn-success botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button class='btn btn-success botao_margem' onclick='altera(this,reservas)'>Modificar</button>"
       }]
 
 var linha = "";
