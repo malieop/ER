@@ -1,28 +1,52 @@
-.footer{
+.footer {
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   text-align: center;
   padding: 10px;
+  background-color: white;
 }
 
-.formCenter{
+.formCenter {
   width: 100%;
   position: absolute;
   top: 50%;
-   transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.page-header{
+.page-header {
   text-align: center;
 }
 
-.errorLogin{
+header {
+  background-image: url("../image/backCars.jpg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+}
+
+.errorLogin {
   color: red;
   text-align: center;
   font-weight: bold;
 }
 
-button{
+button {
   width: 100%;
+}
+
+#input_email {
+  background-image: url(../images/man-user.png);
+  background-repeat: no-repeat;
+  background-position: 2px 3px;
+  background-size: 25px 25px;
+}
+
+#input_pass {
+  background-image: url(../images/password.png);
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  background-size: 20px 20px;
 }

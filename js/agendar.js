@@ -18,12 +18,12 @@ function preencherTabela()
 
         for(var i = 0; i < agendamentos.length; i++)
         {
-          var acoes = '<button onclick="cancelar('+"'"+i+"'"+')" class="btn btn-danger">Cancelar</button>  ';
+          var acoes = '<div class="col-sm-2"> <button onclick="cancelar('+"'"+i+"'"+')"  class="btn btn-danger">Cancelar</button> </div> ';
           var id = "btn_"+i;
           switch(agendamentos[i][3])
           {
             case 1:
-              acoes += '<button id="'+id+'" onclick="autorizar('+"'"+i+"'"+')" class="btn btn-success">Autorizar</button>';
+              acoes += '<div class="col-sm-2"> <button id="'+id+'" onclick="autorizar('+"'"+i+"'"+')" class="btn btn-success">Autorizar</button> </div> ';
             break;
 
 
@@ -60,3 +60,17 @@ function cancelar(ind)
 
   preencherTabela();
 }
+
+function enterFunciona(id_text,id_butao)
+{
+  var input1 = document.getElementById(id_text);
+  input1.addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+          document.getElementById(id_butao).click();
+      }
+  });
+}
+
+enterFunciona('input_dia','submeter');
+enterFunciona('input_mes','submeter');
