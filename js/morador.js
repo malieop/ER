@@ -30,8 +30,16 @@ function IniciarCarregamento()
       }
     else
       {
-        alert("Erro no carregamento, favor tentar mais tarde")
+        //alert("Erro no carregamento, favor tentar mais tarde")
+        var p = document.getElementById("erroCarregamento")
+        p.classList.remove("hide")
+        setTimeout(temporizador, 3000);
       }
 
+      function temporizador()
+      {
+        var p = document.getElementById("erroCarregamento")
+        p.className += " hide"
+      }
 
 }

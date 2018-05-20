@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
 .footer {
   width: 100%;
   position: fixed;
@@ -5,6 +13,11 @@
   text-align: center;
   padding: 10px;
   background-color: white;
+}
+
+.footer, .push {
+  height: 50px;
+  /* .push must be the same height as .footer */
 }
 
 .formCenter {
@@ -18,6 +31,24 @@
   text-align: center;
 }
 
+.errorLogin {
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -142px;
+  /* the bottom margin is the negative value of the footer's height */
+}
+
+.botao_margem{
+  margin: 5px !important;
+}
+
 header {
   background-image: url("../image/backCars.jpg");
   height: 50%;
@@ -27,26 +58,23 @@ header {
   position: fixed;
 }
 
-.errorLogin {
-  color: red;
-  text-align: center;
-  font-weight: bold;
-}
-
 button {
   width: 100%;
 }
 
+th{
+  text-align:center;
+}
 #input_email {
   background-image: url(../images/man-user.png);
   background-repeat: no-repeat;
-  background-position: 2px 3px;
+  background-position: 3px 3px;
   background-size: 25px 25px;
 }
 
 #input_pass {
   background-image: url(../images/password.png);
   background-repeat: no-repeat;
-  background-position: 4px 4px;
+  background-position: 5px 5px;
   background-size: 20px 20px;
 }
