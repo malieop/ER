@@ -100,7 +100,7 @@ function enterFunciona(id_text, id_butao) {
 
 function smartRetorcede()
 {
-  var url_string = window.location.href
+  var url_string = window.location.href;
   var url = new URL(url_string);
   var utilizador = url.searchParams.get("utilizador");
 
