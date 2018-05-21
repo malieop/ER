@@ -98,5 +98,23 @@ function enterFunciona(id_text, id_butao) {
   });
 }
 
+function smartRetorcede()
+{
+  var url_string = window.location.href
+  var url = new URL(url_string);
+  var utilizador = url.searchParams.get("utilizador");
+
+  if(utilizador=="morador1")
+  {
+    window.location.href = 'morador.html?utilizador=morador1';
+  }
+  else
+  {
+    window.location.href = 'morador.html?utilizador=morador';
+  }
+}
+
+enterFunciona('input_hora', 'submeter');
 enterFunciona('input_dia', 'submeter');
 enterFunciona('input_mes', 'submeter');
+enterFunciona('input_valor', 'submeter');
