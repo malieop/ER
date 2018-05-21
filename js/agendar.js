@@ -1,7 +1,7 @@
 // Nome, Dia, Mês, Acoes, Tipo, Valor, hora, é de visitante
 var agendamentos = [
-  ["Rui", 11, 22, 0, "1", "90", 12, 0],
-  ["André", 9, 1, 1, "0", "1", 13, 1],
+  ["Rui", 11, 22, 0, "1", "5", 12, 0],
+  ["André", 9, 1, 1, "0", "90", 13, 1],
 ];
 
 preencherTabela();
@@ -22,9 +22,10 @@ function preencherTabela() {
           case 1:
             acoes += '<div class="col-sm"></div><div><button id="' + id + '" onclick="autorizar(' + "'" + i + "'" + ')" class="btn btn-success botao_margem">Autorizar</button> </div> ';
             break;
-
-
-        }
+            case 2:
+              acoes += '<div class="col-sm"></div><div><p class="errorLogin">Autorizado!</p>';
+              break;
+          }
         // Nome, Dia, Mês, Acoes, Tipo, Valor, hora
 
         var tipo = "";
@@ -65,7 +66,7 @@ function inserirAgendamento() {
   valor = document.getElementById('input_valor').value;
 
   tipo = 0;
-  if (radio_2.checked) {
+  if (document.getElementById('radio_2').checked) {
     tipo = 1;
   }
   // Nome, Dia, Mês, Acoes, Tipo, Valor, hora, é de visitante
@@ -77,7 +78,7 @@ function inserirAgendamento() {
 }
 
 function autorizar(ind) {
-  agendamentos[parseFloat(ind)][3] = 0;
+  agendamentos[parseFloat(ind)][3] = 2 ;
 
   preencherTabela();
 }
@@ -98,18 +99,14 @@ function enterFunciona(id_text, id_butao) {
   });
 }
 
-function smartRetorcede()
-{
+function smartRetorcede() {
   var url_string = window.location.href;
   var url = new URL(url_string);
   var utilizador = url.searchParams.get("utilizador");
 
-  if(utilizador=="morador1")
-  {
+  if (utilizador == "morador1") {
     window.location.href = 'morador.html?utilizador=morador1';
-  }
-  else
-  {
+  } else {
     window.location.href = 'morador.html?utilizador=morador';
   }
 }

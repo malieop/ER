@@ -62,7 +62,7 @@ button {
   width: 100%;
 }
 
-th{
+th, td{
   text-align:center;
 }
 #input_email {

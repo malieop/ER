@@ -4,7 +4,7 @@ var reservas= [
     "col3": "20",//Dia
     "col4":"14",// hora de inicio
     "col5":"14:30",
-    "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera2(this,reservas)'>Modificar</button>"
+    "col6":"<button class='btn btn-danger botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button class='btn btn-success botao_margem' onclick='altera2(this,reservas)'>Modificar</button>"
     },// hora de fim
 
     {"col1":"Apartamento 203",
@@ -12,14 +12,14 @@ var reservas= [
       "col3": "21",
       "col4":"10",
       "col5":"14",
-      "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera2(this,reservas)'>Modificar</button>"},
+      "col6":"<button class='btn btn-danger botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button class='btn btn-success botao_margem' onclick='altera2(this,reservas)'>Modificar</button>"},
 
     {  "col1":"Apartamento 205",
         "col2": "Maio",
         "col3": "30",
         "col4":"14",
         "col5":"16",
-        "col6":"<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera2(this,reservas)'>Modificar</button>"
+        "col6":"<button class='btn btn-danger botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button class='btn btn-success botao_margem' onclick='altera2(this,reservas)'>Modificar</button>"
       }]
 
 var linha = "";
@@ -60,7 +60,7 @@ function tabela(reservas) {
     reservas[i-1]["col3"]=   "<input type=month id='mes'></input>";
     reservas[i-1]["col4"]=   "<input type=time id='hora_inicio'></input>";
     reservas[i-1]["col5"]=   "<input type=time id='hora_fim'></input>";
-    reservas[i-1]["col6"]=   "<button onclick=modifica(linha) id=btn>Confirmar</input>";
+    reservas[i-1]["col6"]=   "<button  class='btn btn-success botao_margem' onclick=modifica(linha) id=btn>Confirmar</input>";
     limpaTabela();
   }
 
@@ -69,7 +69,7 @@ function tabela(reservas) {
     reservas[i-1]["col3"]= $('#mes').val();
     reservas[i-1]["col4"]= $('#hora_inicio').val();
     reservas[i-1]["col5"]= $('#hora_fim').val();
-    reservas[i-1]["col6"]= "<button onclick='myDeleteFunction(this)'>Eliminar</button><button onclick='altera2(this,reservas)'>Modificar</button>"
+    reservas[i-1]["col6"]= "<button class='btn btn-danger botao_margem' onclick='myDeleteFunction(this)'>Eliminar</button><button  class='btn btn-success botao_margem' onclick='altera2(this,reservas)'>Modificar</button>"
     $('#table').DataTable().destroy();
     alert("Alteração concluída com sucesso.");
     tabela(reservas);
